@@ -13,7 +13,7 @@ export default function Main() {
       </View>
     );
   }
-
+  console.log(coords);
   if (!coords) {
     return (
       <View style={styles.center}>
@@ -33,7 +33,9 @@ export default function Main() {
       }}
       showsUserLocation={true}
     >
-      <Marker />
+      <Marker
+        coordinate={coords}
+      />
     </MapView>
   );
 }
